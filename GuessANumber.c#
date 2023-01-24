@@ -1,0 +1,14 @@
+Random m = new Random();
+int rightNumber = m.Next(1, 101);
+int playerNumber = 0;
+Console.WriteLine(rightNumber);
+while (rightNumber != guessNumber)
+{
+    Console.Write("Guess a number (1-100): ");
+    playerNumber = int.Parse(Console.ReadLine());
+    if (playerNumber > rightNumber)
+        Console.WriteLine("Too High");
+    else if (playerNumber < rightNumber) 
+        Console.WriteLine("Too Low");
+}
+Console.WriteLine("You guessed it!");
